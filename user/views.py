@@ -1,12 +1,20 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
+from logging import getLogger
 
 from models import Profile
 
 
+LOGGER = getLogger()
+
+
 class ProfileCreateView(CreateView):
-    model = Profile
-    fields = ['name', 'biography']
+    template_name = "profile_form.html"
+    form_class = ProfileForm
+
+    def form_invalid(self, form):
+        LOGGER.warning("Użytkownik przesłał nieprawidłowe dane")
+        return super().form_invalid(form)
 
 
 class ProfileDetailView(DetailView):
