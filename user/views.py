@@ -6,8 +6,8 @@ from django.urls import reverse_lazy
 from logging import getLogger
 
 
-from models import Profile
-from forms import SignUpForm, ProfileForm
+from .models import Profile
+from .forms import SignUpForm, ProfileForm
 
 
 LOGGER = getLogger()

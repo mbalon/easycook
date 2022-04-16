@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db.models import (
     Model,
     CharField,
@@ -9,7 +10,6 @@ from django.db.models import (
     DO_NOTHING
 )
 
-from easycook.user.models import Profile
 
 
 class FoodType(Model):
@@ -39,7 +39,7 @@ class Recipe(Model):
     description = TextField()
     time_to_prepare = CharField(max_length=15)
     picture = ImageField(null=True)
-    author = ForeignKey(Profile, on_delete=DO_NOTHING)
+    author = ForeignKey('user.Profile', on_delete=DO_NOTHING)
 
     def __str__(self):
         return self.name
