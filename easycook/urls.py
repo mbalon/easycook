@@ -19,6 +19,6 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recipe.urls')),
-    path('', include('user.urls'))
+    path('recipe/', include('recipe.urls')),
+    path('user/', include('user.urls')),
 ]
