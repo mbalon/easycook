@@ -9,22 +9,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock title %}</title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"  />
+        <script src="{% static 'script.js'%}" defer></script>
     </head>
 
 
 
     <body>
-    <nav>
-        <label class="logo">Easy Cook</label>
-        <input type="image" id="drop_menu" name="drop_menu" src="{% static 'assets/icons/1046747.png' %}" width="70" height="80" alt="text">
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Sign up</a></li>
-            <li><a href="#">Sign in</a></li>
-        </ul>
-
+    <nav class="navbar">
+        <div class="brand-title">Easy Cook</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign up</a></li>
+                <li><a href="#">Sign in</a></li>
+            </ul>
+        </div>
+        <!-- <input type="image" class="drop_menu_btn right" src="{% static 'assets/icons/1046747.png' %}" width="55" height="60" alt="text"> -->
     </nav>
+
     <p> Hello world !</p>
     {% block content %}
     {% endblock %}
