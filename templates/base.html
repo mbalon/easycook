@@ -32,9 +32,16 @@
         </div>
         <!-- <input type="image" class="drop_menu_btn right" src="{% static 'assets/icons/1046747.png' %}" width="55" height="60" alt="text"> -->
     </nav>
+    <div class="container">
+        <aside class="sidebar"></aside>
+        <span> test content </span>
 
-    <p> Hello world !</p>
-    {% block content %}
-    {% endblock %}
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+
     </body>
 </html>
