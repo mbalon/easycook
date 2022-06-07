@@ -3,6 +3,7 @@
 }
 :root{
     --navbar-height: 60px;
+    --sidebar-width: 175px;
 }
 
 body{
@@ -14,12 +15,12 @@ body{
 .navbar {
     display: flex;
     position: sticky;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     height: var(--navbar-height);
     background-color: #5b2c08;
     color: white;
-    margin-bottom: 1rem;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
 }
 
@@ -72,14 +73,14 @@ body{
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 125px;
+    position: sticky;
+    top: var(--navbar-height);
+    width: var(--sidebar-width);
     height: calc(100vh - var(--navbar-height));
     background-color: #5b2c08;
     color: white;
-    margin-top: -1rem;
-    margin-right: 0.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-right: .5rem;
@@ -89,6 +90,19 @@ body{
 
 .container{
     display: flex;
+}
+
+.background-wrap{
+    position: relative;
+}
+
+.bg{
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 182vh;
+  height: calc(100vh - var(--navbar-height));
 }
 
 .content {

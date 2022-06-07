@@ -24,25 +24,27 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sign up</a></li>
-                <li><a href="#">Sign in</a></li>
+                <li><a class="active" href="#">Główna</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Rejestracja</a></li>
+                <li><a href="#">Zaloguj</a></li>
             </ul>
         </div>
         <!-- <input type="image" class="drop_menu_btn right" src="{% static 'assets/icons/1046747.png' %}" width="55" height="60" alt="text"> -->
     </nav>
     <div class="container">
         <aside class="sidebar">
-            <span>wyszukiwarka</span>
-            <span>lista składników</span>
+            <span><b>Zainspiruj się!</b></span>
+            <span> Zero waist tip </span>
         </aside>
 
-
-        <main class="content">
-            {% block content %}
-            {% endblock %}
-        </main>
+        <div class="background-wrap">
+            <img class="bg" src="{% static 'assets/images/Vegetables1.jpg'%}" alt="Vegetables picture">
+            <main class="content">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
     </div>
 
 
