@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="about-heading-content">
+        <span>Username: {{object.username}}</span><br>
+        <span>First name: {{object.first_name}}</span><br>
+        <span>Last name: {{object.last_name}}</span><br>
+        <a class="btn btn-primary" href="{% url 'user-update' %}">Edit profile</a>
+        <a class="btn btn-danger" href="{% url 'profile-delete' %}">Delete profile</a>
+    </div>
+</div>
+
+{% endblock %}

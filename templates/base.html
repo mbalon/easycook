@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+{% load static %}
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"  />
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <script src="{% static 'script.js'%}" defer></script>
+    </head>
+
+
+
+    <body>
+    <nav class="navbar">
+        <div class="brand-title">Easy Cook</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a class="active" href="#">Główna</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Rejestracja</a></li>
+                <li><a href="#">Zaloguj</a></li>
+            </ul>
+        </div>
+        <!-- <input type="image" class="drop_menu_btn right" src="{% static 'assets/icons/1046747.png' %}" width="55" height="60" alt="text"> -->
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <span><b>Zainspiruj się!</b></span>
+            <span> Zero waist tip </span>
+        </aside>
+
+        <div class="background-wrap">
+            <img class="bg" src="{% static 'assets/images/Vegetables1.jpg'%}" alt="Vegetables picture">
+        </div>
+            <main class="content">
+                {% block content %}
+                {% endblock %}
+            </main>
+    </div>
+
+
+    </body>
+</html>
