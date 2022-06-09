@@ -22,11 +22,14 @@ body{
     background-color: #5b2c08;
     color: white;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+    z-index: 3;
 }
 
 .brand-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: .5rem;
+    padding-left: 1rem;
+    font-family: 'Roboto';
 }
 
 .navbar-links ul {
@@ -86,6 +89,7 @@ body{
     padding-right: .5rem;
     padding-left: .5rem;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+    z-index: 2;
 }
 
 .container{
@@ -97,16 +101,21 @@ body{
 }
 
 .bg{
-  opacity: 0.6;
   position: absolute;
+  opacity: 0.6;
   left: 0;
   top: 0;
-  width: 182vh;
+  width: 100vw;
   height: calc(100vh - var(--navbar-height));
+  z-index: 2;
 }
 
 .content {
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    z-index: 3;
 }
 @media (max-width: 600px) {
     .toggle-button {
